@@ -22,7 +22,7 @@ oldpeak = st.slider("Oldpeak (ST depression induced by exercise relative to rest
 
 
 if st.button("predict"):
-    rew_input = {
+    raw_input = {
         'Age': age,
         'Resting bp': resting_bp,
         'Cholestrol': cholestrol,
@@ -32,8 +32,7 @@ if st.button("predict"):
         'Sex_'+sex: 1,
         'chestpaintype_'+ chest_pain_type:1,
         'RestingECG_' + resting_ecg: 1,
-        'exerciseAngina_'+ exercise_angina: 1,
-        'st_slope_'+ st_slope : 1
+        'exerciseAngina_'+ exercise_angina: 1
     }
 
     input_df = pd.DataFrame([raw_input])
